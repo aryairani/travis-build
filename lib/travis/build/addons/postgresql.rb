@@ -17,7 +17,7 @@ module Travis
           end
           sh.else do
             sh.fold 'postgresql' do
-              sh.cmd(template('postgresql.sh', version: version), echo: true, timing: true)
+              sh.raw(template('postgresql.sh', version: version), echo: true, timing: true)
             end
           end
         end

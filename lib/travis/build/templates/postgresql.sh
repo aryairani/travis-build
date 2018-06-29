@@ -20,6 +20,7 @@ setup_postgres() {
     esac
   fi
 
+  echo -e "${ANSI_YELLOW}Starting PostgreSQL v${version}${ANSI_CLEAR}"
   export PATH="/usr/lib/postgresql<%version%>/path:$PATH"
 
   if [[ "TRAVIS_INIT" == upstart ]]; then
